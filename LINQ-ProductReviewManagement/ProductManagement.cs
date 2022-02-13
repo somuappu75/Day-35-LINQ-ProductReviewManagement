@@ -39,5 +39,24 @@ namespace LINQ_ProductReviewManagement
                 Console.WriteLine("ProductId:-" + list.ProductId + " UserId:-" + list.UserId + " Ratings:-" + list.Rating + " Review:-" + list.Review + " IsLike:-" + list.isLike);
             }
         }
+        //UC-4 grouping by user id 
+        public void countOfReviews(List<ProductReview> listProductReview)
+        {
+            //lambda syntax
+            var recordData = listProductReview.GroupBy(r => r.UserId).Select(r => new { productId = r.Key, count = r.Count() });
+            //query syntax
+            var recordedData = from products in listProductReview
+                               group products by products.UserId into g
+                               select new
+                               {
+                                   userId = g.Key,
+                                   count = g.Count()
+                               };
+
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine("UserId:-" + list.userId + " Count:-" + list.count);
+            }
+        }
     }
 }
