@@ -35,7 +35,7 @@ namespace LINQ_ProductReviewManagement
         public void CallForRetrievingData()
         {
             //CALLING  retrieving records method from product management
-            ProductManagement productManagement = new ProductManagement();
+           
             productManagement.RetrievingRecords(table);
         }
 
@@ -49,6 +49,12 @@ namespace LINQ_ProductReviewManagement
         public void CallForReviewRetrieveNice()
         {
             productManagement.ReviewMessageRetrieveNice(table);
+        }
+        //UC-12 AddRecords
+
+        public void AddRecordCall()
+        {
+            productManagement.SelectRecordsForUserId(table);
         }
     }
 }
