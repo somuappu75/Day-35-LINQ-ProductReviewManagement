@@ -9,6 +9,7 @@ namespace LINQ_ProductReviewManagement
     {
 
         DataTable table = new DataTable();
+        ProductManagement productManagement = new ProductManagement();
         public void AddDataTable()
         {
             DataTable table = new DataTable();
@@ -36,6 +37,12 @@ namespace LINQ_ProductReviewManagement
             //CALLING  retrieving records method from product management
             ProductManagement productManagement = new ProductManagement();
             productManagement.RetrievingRecords(table);
+        }
+
+        //uc-10
+        public void CallForAverageRatings()
+        {
+            productManagement.AverageRatingForUserIDUsingDataTable(table);
         }
     }
 }
