@@ -55,9 +55,9 @@ namespace LINQ_ProductReviewManagement
             //UC4
             //productManagement.countOfReviews(productReviewList);
             //UC5
-           // productManagement.retrieveProductIDandreview(productReviewList);
+           productManagement.retrieveProductIDandreview(productReviewList);
             //UC6
-            productManagement.SkippingRecords(productReviewList);
+           // productManagement.SkippingRecords(productReviewList);
 
 
         }

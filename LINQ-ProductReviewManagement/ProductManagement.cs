@@ -59,6 +59,7 @@ namespace LINQ_ProductReviewManagement
             }
         }
         //UC-5 Retrieves the product id and review 
+        //UC-7 Retrieves the product id and review 
         public void retrieveProductIDandreview(List<ProductReview> productReviewList)
         {
             var recordData = productReviewList.Select(r => new { r.ProductId, r.Review });
@@ -79,5 +80,7 @@ namespace LINQ_ProductReviewManagement
             }
 
         }
+        //UC-7 Retrieves the product id and review 
+
     }
 }
