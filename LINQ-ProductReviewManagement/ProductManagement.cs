@@ -95,6 +95,17 @@ namespace LINQ_ProductReviewManagement
                 Console.WriteLine("ProductId:-" + list.Field<string>("productId") + " UserId:-" + list.Field<string>("userId") + " Ratings:-" + list.Field<string>("ratings") + " Review:-" + list.Field<string>("reviews") + " IsLike:-" + list.Field<string>("isLike"));
             }
         }
+        //UC-10 Avg rating
+        public void AverageRatingForUserIDUsingDataTable(DataTable table)
+        {
+            //field for data table always takes string as data type and then casted to integer.
+            //used lambda syntax
+            var recordData = table.AsEnumerable().GroupBy(r => r.Field<string>("userId")).Select(r => new { userid = r.Key, averageRatings = r.Average(x => Convert.ToInt32(x.Field<string>("ratings"))) });
+            foreach (var list in recordData)
+            {
+                Console.WriteLine("user Id:-" + list.userid + " Ratings :" + list.averageRatings);
+            }
+        }
 
     }
 }

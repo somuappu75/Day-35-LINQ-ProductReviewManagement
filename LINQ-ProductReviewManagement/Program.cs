@@ -57,8 +57,16 @@ namespace LINQ_ProductReviewManagement
             //UC5
            productManagement.retrieveProductIDandreview(productReviewList);
             //UC6
-           // productManagement.SkippingRecords(productReviewList);
-
+            // productManagement.SkippingRecords(productReviewList);
+            //productManagement.SkippingRecords(productReviewList);
+            //UC9
+            DataTableForProductManagement dataTableForProductManagement = new DataTableForProductManagement();
+            //dataTableForProductManagement.AddDataTable();
+            //dataTableForProductManagement.CallForRetrievingData();
+            //UC10
+            //productManagement.AverageRatingForUserId(productReviewList);
+            dataTableForProductManagement.AddDataTable();
+            dataTableForProductManagement.CallForAverageRatings();
 
         }
     }
