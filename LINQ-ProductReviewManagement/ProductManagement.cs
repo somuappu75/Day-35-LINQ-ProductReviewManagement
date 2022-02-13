@@ -106,6 +106,17 @@ namespace LINQ_ProductReviewManagement
                 Console.WriteLine("user Id:-" + list.userid + " Ratings :" + list.averageRatings);
             }
         }
+        //uc-11 records from containe nice
+        public void ReviewMessageRetrieveNice(DataTable table)
+        {
+            var recordData = table.AsEnumerable().Where(r => r.Field<string>("reviews") == "Average");
+            foreach (var list in recordData)
+            {
+                //field datatype is string here for every column
+                Console.WriteLine("ProductId:-" + list.Field<string>("productId") + " UserId:-" + list.Field<string>("userId") + " Ratings:-" + list.Field<string>("ratings") + " Review:-" + list.Field<string>("reviews") + " IsLike:-" + list.Field<string>("isLike"));
+            }
+
+        }
 
     }
 }
