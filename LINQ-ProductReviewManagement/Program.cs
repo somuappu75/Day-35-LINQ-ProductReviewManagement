@@ -46,12 +46,14 @@ namespace LINQ_ProductReviewManagement
             //{
             //    Console.WriteLine("ProductId:-" + list.ProductId + " UserId:-" + list.UserId + " Ratings:-" + list.Rating + " Review:-" + list.Review + " IsLike:-" + list.isLike);
             //}
-
-            //UC2
             ProductManagement productManagement = new ProductManagement();
-            //productManagement.TopRecords(productReviewList);
-            //UC3
-            productManagement.SelectedRecords(productReviewList);
+            ////UC2
+            //ProductManagement productManagement = new ProductManagement();
+            ////productManagement.TopRecords(productReviewList);
+            ////UC3
+            //productManagement.SelectedRecords(productReviewList);
+            //UC4
+            productManagement.countOfReviews(productReviewList);
         }
     }
 }
