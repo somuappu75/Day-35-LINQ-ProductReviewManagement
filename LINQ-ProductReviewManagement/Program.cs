@@ -68,6 +68,10 @@ namespace LINQ_ProductReviewManagement
             dataTableForProductManagement.AddDataTable();
             dataTableForProductManagement.CallForAverageRatings();
 
+            //UC11
+            dataTableForProductManagement.AddDataTable();
+            dataTableForProductManagement.CallForReviewRetrieveNice();
+
         }
     }
 }
