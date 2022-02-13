@@ -58,5 +58,14 @@ namespace LINQ_ProductReviewManagement
                 Console.WriteLine("UserId:-" + list.userId + " Count:-" + list.count);
             }
         }
+        //UC-5 Retrieves the product id and review 
+        public void retrieveProductIDandreview(List<ProductReview> productReviewList)
+        {
+            var recordData = productReviewList.Select(r => new { r.ProductId, r.Review });
+            foreach (var list in recordData)
+            {
+                Console.WriteLine("product Id:-" + list.ProductId + " Review :-" + list.Review);
+            }
+        }
     }
 }
