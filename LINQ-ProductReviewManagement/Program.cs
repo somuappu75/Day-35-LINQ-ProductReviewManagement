@@ -49,6 +49,9 @@ namespace LINQ_ProductReviewManagement
 
             //UC2
             ProductManagement productManagement = new ProductManagement();
+            //productManagement.TopRecords(productReviewList);
+            //UC3
+            productManagement.SelectedRecords(productReviewList);
         }
     }
 }
