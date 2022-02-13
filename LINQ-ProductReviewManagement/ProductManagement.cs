@@ -67,5 +67,17 @@ namespace LINQ_ProductReviewManagement
                 Console.WriteLine("product Id:-" + list.ProductId + " Review :-" + list.Review);
             }
         }
+        //UC-6 --skipping the top 5 records
+        public void SkippingRecords(List<ProductReview> productReviewList)
+        {
+            var recordData = productReviewList.Skip(5);
+            var recordedData = (from products in productReviewList
+                                select products).Skip(5);
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine("ProductId:-" + list.ProductId + " UserId:-" + list.UserId + " Ratings:-" + list.Rating + " Review:-" + list.Review + " IsLike:-" + list.isLike);
+            }
+
+        }
     }
 }
