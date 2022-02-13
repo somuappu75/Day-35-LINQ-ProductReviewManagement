@@ -53,7 +53,11 @@ namespace LINQ_ProductReviewManagement
             ////UC3
             //productManagement.SelectedRecords(productReviewList);
             //UC4
-            productManagement.countOfReviews(productReviewList);
+            //productManagement.countOfReviews(productReviewList);
+            //UC5
+            productManagement.retrieveProductIDandreview(productReviewList);
+
+
         }
     }
 }
