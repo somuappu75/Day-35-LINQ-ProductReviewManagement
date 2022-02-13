@@ -7,6 +7,8 @@ namespace LINQ_ProductReviewManagement
 {
     class DataTableForProductManagement
     {
+
+        DataTable table = new DataTable();
         public void AddDataTable()
         {
             DataTable table = new DataTable();
@@ -27,6 +29,13 @@ namespace LINQ_ProductReviewManagement
             table.Rows.Add("10", "2", "2", "Bad", false);
             table.Rows.Add("11", "3", "3", "Average", true);
             table.Rows.Add("12", "1", "3", "Average", false);
+        }
+        //uc-9 retrieving data
+        public void CallForRetrievingData()
+        {
+            //CALLING  retrieving records method from product management
+            ProductManagement productManagement = new ProductManagement();
+            productManagement.RetrievingRecords(table);
         }
     }
 }
