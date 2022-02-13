@@ -44,5 +44,11 @@ namespace LINQ_ProductReviewManagement
         {
             productManagement.AverageRatingForUserIDUsingDataTable(table);
         }
+
+        //UC-11
+        public void CallForReviewRetrieveNice()
+        {
+            productManagement.ReviewMessageRetrieveNice(table);
+        }
     }
 }
